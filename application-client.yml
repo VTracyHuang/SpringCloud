@@ -1,0 +1,32 @@
+server: 
+  port: 7000
+ 
+spring: 
+  profile: dev      #开发环境
+  application:
+    name: woniu58-config-client-dev #当前项目的名字
+
+eureka:
+  client: #客户端注册到eureka列表中
+    service-url:
+      defaultZone: http://eurekaserver9001.com:9001/eureka/
+  instance:
+    instance-id: SpringCloud-config-client  #配置中心显示出来的微服务名称
+    prefer-ip-address: true #显示访问url
+
+---
+
+server: 
+  port: 7000
+ 
+spring: 
+  profile: test      #开发环境
+  application:
+    name: woniu58-config-client-test #当前项目的名字
+
+eureka:
+  client: #客户端注册到eureka列表中
+    service-url:
+      defaultZone: http://eurekaserver9001.com:9001/eureka/
+    instance-id: SpringCloud-config-test  #配置中心显示出来的微服务名称
+    prefer-ip-address: true #显示访问url
