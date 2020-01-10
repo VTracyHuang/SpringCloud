@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+<body>
+	<textarea rows="2" cols="30" id = "testta"></textarea>
+	<button  id="testbt">send</button>
+</body>
+<script type="text/javascript">
+	$(function(){
+		var username = "Tracy"
+			var url = "ws://192.168.7.164:8889/chat/"+username;
+			var ws = null;
+			var message = " test test test";
+			$("#testbt").click(function(){
+				ws = new WebSocket(url);
+				//给ws绑定事件
+				ws.onopen = function(){
+					console.info("连接服务器成功!");
+					//发送消息
+					if(ws!=null){
+						message = JSON.stringify(message);
+						ws.send(message);
+						alert("1");
+					}
+				}
+				
+				//onmessage:接收到服务器数据时触发
+				ws.onmessage = function(result){
+					console.dir(result.data);  //显示得到的数据
+				}
+			});
+	});
+</script>
+</html>

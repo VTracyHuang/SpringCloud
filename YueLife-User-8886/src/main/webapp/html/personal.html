@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="../css/personal.css" rel="stylesheet" type="text/css">
+		<link href="../css/infstyle.css" rel="stylesheet" type="text/css">
+		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		   <!-- Mobile Specific Metas
+		================================================== -->
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		  
+		  <!-- CSS
+		================================================== -->
+			<!-- Definity CSS -->
+			<link href="../css/zerogrid.css" rel="stylesheet" media="all" type="text/css">
+			<link href="../css/style.css" rel="stylesheet" media="all" type="text/css">
+			<link href="../css/menu.css" rel="stylesheet" media="all" type="text/css">
+			
+			<!-- Custom Fonts -->
+			<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+			
+			<!-- Owl Carousel Assets -->
+		    <link href="../owl-carousel/owl.carousel.css" rel="stylesheet">
+		    <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
+			<link href="../css/personal.css" rel="stylesheet" type="text/css">
+			<link href="../css/infstyle.css" rel="stylesheet" type="text/css">
+		
+			<!-- JS -->
+			<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+			<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>	
+	</head>
+	<body>
+		<header>
+			<div class="wrap-header" >
+				<img style="width: 100% " src="../images/personalCenter.png" />
+				<!---Top Menu--->
+			<div id="cssmenu" style="margin-top: -5px;">
+				<ul>
+				   <li class="active"><a href="/complaints/yuelife/index"><span>主页</span></a></li>
+				   <li class="has-sub"><a href="easyLife.html"><span>便民服务</span></a>
+					  <ul>
+						 <li ><a href="easyLife.html"><span>家政服务</span></a>
+						 </li>
+						 <li><a href="easyLife.html"><span>跑腿快递</span></a>
+						 </li>
+					  </ul>
+				   </li>
+				 <li class="has-sub"><a href="#"><span>社区广场</span></a>
+					  <ul>
+						 <li class="has-sub"><a href="/interaction/interaction/tocommunityinteractiontype"><span>社区动态</span></a>
+							 <ul>
+							 	<li ><a href="/interaction/interaction/topublishinteraction"><span>发布动态</span></a>
+							 	</li>
+							 	<li ><a href="/interaction/interaction/tomyinteraction"><span>我的动态</span></a>
+							 	</li>
+						 	</ul>
+						 </li>
+						 <li class="has-sub"><a href="/activity/activity/toActivityPage"><span>社区活动</span></a>
+						 	<ul>
+						 		<li><a href="/activity/activity/toActivityPage"><span>报名进行中</span></a></li>
+						 		<li><a href="/activity/activity/toWait"><span>报名未开始</span></a></li>
+						 		<li><a href="/activity/activity/toOverdue"><span>活动已过期</span></a></li>
+						 	</ul>
+						 </li>
+					  </ul>
+				   </li>
+				   <li><a href="/complaints/yuelife/personal"><span>个人中心</span></a></li>
+				   <li><a href="/complaints/yuelife/aboutus"><span>关于我们</span></a></li>
+				   <li><a href="/complaints/yuelife/words"><span>留言板</span></a></li>
+				</ul>
+			</div>
+				
+			</div>
+		</header>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+					<!--个人信息 -->
+					<div class="user-info">
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">个人资料</strong> / <small>Personal&nbsp;information</small></div>
+						</div>
+						<!--头像 -->
+						<div class="user-infoPic" style="margin-left:80px;">
+							<div class="filePic">
+								<input type="file" id="my_icon"  class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*">
+								<img id="myimg"  class="am-circle am-img-thumbnail"  src="../images/1.jpg" alt="" />
+							</div>
+							<p  class="am-form-help">头像</p>
+
+							<div class="info-m" style="padding-top:20px;">
+								<div><b>用户名：<i id="user-account"></i></b></div>
+								<input type="hidden" id="user-account2" name="account"/>
+							</div>
+						</div>
+
+						<div class="info-main">
+							<form class="am-form am-form-horizontal" >
+								<div class="am-form-group">
+									<label for="user-name2" class="am-form-label">姓名</label>
+									<div class="am-form-content">
+										<input type="text" id="user-name" placeholder="name" name="name">
+									</div>
+								</div>
+								
+								<div class="am-form-group">
+									<label class="am-form-label">性别</label>
+									<div class="am-form-content sex">
+										<label class="am-radio-inline">
+											<input type="radio" name="radio10" value="male" data-am-ucheck> 男
+										</label>
+										<label class="am-radio-inline">
+											<input type="radio" name="radio10" value="female"  checked="checked" data-am-ucheck> 女
+										</label>
+										<label class="am-radio-inline">
+											<input type="radio" name="radio10" value="secret" data-am-ucheck> 保密
+										</label>
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-phone" class="am-form-label">电话</label>
+									<div class="am-form-content">
+										<input id="user-phone" placeholder="telephonenumber" type="tel" name="phone">
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-email" class="am-form-label">电子邮件</label>
+									<div class="am-form-content">
+										<input id="user-email" placeholder="Email" type="email" name="email">
+									</div>
+								</div>
+								<input type="hidden" id="user-id"/>
+								<div class="info-btn">
+									<input type="submit" class="am-btn am-square am-btn-success" value="保存修改" onclick="updateUser()">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<aside class="menu">
+				<ul>
+					<div style="border-bottom: 2px solid green;padding: 2px;">
+						<a href="index.html"><img class="user-icon" src="../images/user.png"/><font style="font-size: medium;">个人中心</font></a>
+					</div>
+					<li class="person">
+						<p><img class="user-icon2" src="../images/usermessage.png"/></i>个人资料</p>
+						<ul>
+							<li> <a href="personal.html">个人信息</a></li>
+							<li> <a href="password.html">密码修改</a></li> </li>
+						</ul>
+					</li>
+<!-- 					<li class="person">
+						<p><img class="user-icon2" src="../images/collection.png"/>我的收藏</p>
+						<ul>
+							<li> <a href="collection.html">店铺收藏</a></li>
+						</ul>
+					</li> -->
+
+					<li class="person">
+						<p><img class="user-icon2" src="../images/serviceplat.png"/>服务中心</p>
+						<ul>
+							<li> <a href="complaint.html">投诉中心</a></li>
+							<li> <a href="message.html">消息中心</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#my_icon").change(function() {
+					var file=this.files[0];
+					var formData = new FormData();
+					console.log(file);
+					formData.append("file",file);
+					if (window.FileReader) {
+				          var reader = new FileReader();
+				          reader.readAsDataURL(file);
+				          //监听文件读取结束后事件    
+				          reader.onloadend = function(e) {
+				            $("#myimg").attr("src", e.target.result); //e.target.result就是最后的路径地址
+				          };
+				        }
+				});
+				$.ajax({
+					url:"../user/findUserByAccount2",
+					type:"get",
+					success:function(user){
+						var id = user ["id"];
+						var account = user["account"];
+						var name = user["name"];
+						var phone = user["phone"];
+						var email = user["email"];
+						$("#user-id").val(id);
+						$("#user-account").html(account);
+						$("#user-account2").val(account);
+						$("#user-name").val(name);
+						$("#user-phone").val(phone);
+						$("#user-email").val(email);
+					}
+				});
+			});
+			 function updateUser(){
+				$.ajax({
+					url:"../user/updateUserByAccount",
+					type:"post",
+					data:{
+						id : $("#user-id").val(),
+						account : $("#user-account").html(),
+						name : $("#user-name").val(),
+						phone : $("#user-phone").val(),
+						email : $("#user-email").val()
+					},
+					success:function(result){
+						alert("修改成功");
+					}
+				});
+			} 
+		</script>
+	</body>
+</html>

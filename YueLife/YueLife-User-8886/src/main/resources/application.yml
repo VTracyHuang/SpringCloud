@@ -1,0 +1,31 @@
+server:
+  port: 8886
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  type-aliases-package: com.example.demo.pojo.User
+spring: 
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yuelife?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: 123456
+  redis: 
+    database: 0
+    host: localhost
+    port: 6379
+    timeout: 5000
+    jedis: 
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 1  
+  application:
+    name: wecloud-users
+eureka:
+  client: 
+    service-url: 
+      defaultZone: http://eurekaserver9001.com:9001/eureka/
+  instance:
+    instance-id: wecloud-users-8886 #配置中心中显示微服务的名称
+    prefer-ip-address: true   #是否显示访问微服务的url（可选）

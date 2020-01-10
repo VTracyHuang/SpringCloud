@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		
+		<link href="../css/personal.css" rel="stylesheet" type="text/css">
+		<link href="../css/stepstyle.css" rel="stylesheet" type="text/css">
+		<!-- Mobile Specific Metas
+		================================================== -->
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		  
+		  <!-- CSS
+		================================================== -->
+			<!-- Definity CSS -->
+			<link href="../css/zerogrid.css" rel="stylesheet" media="all" type="text/css">
+			<link href="../css/style.css" rel="stylesheet" media="all" type="text/css">
+			<link href="../css/menu.css" rel="stylesheet" media="all" type="text/css">
+			<!-- Lightbox -->
+			<link href="../css/lightbox.css" rel="stylesheet" media="all" type="text/css">
+			<!-- Video Background -->
+			<link href="../css/jquery.mb.ytplayer.min.css" rel="stylesheet" media="all" type="text/css">
+			<!-- Animate.css -->
+			<link href="../css/animate.css" rel="stylesheet" media="all" type="text/css">
+			
+			<!-- Custom Fonts -->
+			<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+			
+			<!-- Owl Carousel Assets -->
+		 	 <link href="../owl-carousel/owl.carousel.css" rel="stylesheet">
+			  <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
+			<link href="../css/personal.css" rel="stylesheet" type="text/css">
+			<link href="../css/infstyle.css" rel="stylesheet" type="text/css">
+			
+			<!-- JS -->
+			<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+			<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>	
+			<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="wrap-header" >
+				<img  style="width: 100% " src="../images/personalCenter.png" />
+				<!---Top Menu--->
+				<div id="cssmenu" style="margin-top: -5px;">
+					<ul>
+					   <li class="active"><a href="index.html"><span>主页</span></a></li>
+					   <li class="has-sub"><a href="easyLife.html"><span>便民服务</span></a>
+						  <ul>
+							 <li ><a href="easyLife.html"><span>家政服务</span></a>
+							 </li>
+							 <li><a href="easyLife.html"><span>跑腿快递</span></a>
+							 </li>
+						  </ul>
+					   </li>
+					   <li class="has-sub"><a href="communitySquare.html"><span>社区广场</span></a>
+						  <ul>
+							 <li ><a href="communitySquare.html"><span>社区动态</span></a>
+							 </li>
+							 <li><a href="communitySquare.html"><span>社区活动</span></a>
+							 </li>
+						  </ul>
+					   </li>
+					   <li><a href="personal.html"><span>个人中心</span></a></li>
+					   <li><a href="aboutus.html"><span>关于我们</span></a></li>
+						<li><a href="words.html"><span>留言板</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+				
+					<div class="am-cf am-padding">
+						<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">房屋认证</strong> / <small>Real&nbsp;authentication</small></div>
+					</div>
+					<div class="authentication">
+						<p class="tip">请如实填写您的房屋信息，以用于社区审核</p>
+						<div class="authenticationInfo">
+							<p class="title">填写个人信息</p>
+				
+							<div class="am-form-group">
+								<label for="user-name" class="am-form-label">真实姓名</label>
+								<div class="am-form-content">
+									<input type="text" id="user-name" placeholder="请输入您的真实姓名">
+								</div>
+							</div>
+							<div class="am-form-group">
+								<label for="user-IDcard" class="am-form-label">身份证号</label>
+								<div class="am-form-content">
+									<input type="tel" id="user-IDcard" placeholder="请输入您的身份证信息">
+								</div>
+							</div>
+						</div>
+						<div class="authenticationPic">
+							<p class="title">填写房屋信息</p>
+							<p class="tip">请按要求上传房产证</p>
+							<br/> 
+							<div class="am-form-group">
+								<label for="user-address" class="am-form-label">所属小区</label>
+								<div class="am-form-content address">
+									<select data-am-selected>
+										<option value="a">蓝鹰小区</option>
+										<option value="b" selected>明珠小区</option>
+										<option value="c">世纪城小区</option>
+										<option value="d">香颂小区</option>
+										<option value="e">绿地小区</option>
+									</select>
+								</div>
+								<!-- <div class="am-form-content address">
+								<label for="user-address" class="am-form-label">所属期</label>
+									<select data-am-selected>
+										<option value="一">一期</option>
+										<option value="二" selected>二期</option>
+										<option value="三">三期</option>
+									</select>
+								</div>
+								<div class="am-form-content address">
+								<label for="user-address" class="am-form-label">所属栋</label>
+									<select data-am-selected>
+										<option value="1">1</option>
+										<option value="2" selected>2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div> -->
+							</div>
+
+							<div class="am-form-group">
+								<label for="user-intro" class="am-form-label">详细地址</label>
+								<div class="am-form-content">
+									<textarea class="" rows="" id="user-intro" placeholder="输入详细地址"></textarea>
+								</div>
+							</div>
+
+						</div>
+						<div class="info-btn">
+							<div class="am-btn am-square am-btn-success">提交</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<aside class="menu">
+				<ul>
+					<div style="border-bottom: 2px solid green;padding: 2px;">
+						<a href="index.html"><img class="user-icon" src="../images/user.png"/><font style="font-size: medium;">个人中心</font></a>
+					</div>
+						
+					
+					<li class="person">
+						<p><img class="user-icon2" src="../images/usermessage.png"/></i>个人资料</p>
+						<ul>
+							<li> <a href="personal.html">个人信息</a></li>
+							<li> <a href="safety.html">房屋认证</a></li>
+							<li> <a href="password.html">密码修改</a></li> </li>
+						</ul>
+					</li>
+					<li class="person">
+						<p><img class="user-icon2" src="../images/collection.png"/>我的收藏</p>
+						<ul>
+							<li> <a href="collection.html">店铺收藏</a></li>
+						</ul>
+					</li>
+			
+					<li class="person">
+						<p><img class="user-icon2" src="../images/serviceplat.png"/>服务中心</p>
+						<ul>
+							<li> <a href="complaint.html">投诉中心</a></li>
+							<li> <a href="message.html">消息中心</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+		</div>
+	</body>
+</html>
+

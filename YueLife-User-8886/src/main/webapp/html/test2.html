@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/font.css">
+<link rel="stylesheet" href="../css/xadmin.css">
+<script type="text/javascript"
+	src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="../lib/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/xadmin.js"></script>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div>
+			<select id="state"
+				onchange="searchByState(this.options[this.options.selectedIndex].value)">
+				<option value="">回复状态</option>
+				<option value="1">已回复</option>
+				<option value="2">未回复</option>
+			</select>
+		</div>
+		<br />
+		<div>
+			<input type="text" id="keywords" /> <br />
+			<br /> <input type="button" value="search" id="keywordsSearch"
+				onclick="searchByKeywords()" />
+		</div>
+		<div>
+			<table class="layui-table layui-form">
+				<thead>
+					<tr>
+						<th><input type="checkbox" name="" lay-skin="primary">
+						</th>
+						<th>投诉编号</th>
+						<th>投诉标题</th>
+						<th>投诉内容</th>
+						<th>投诉人帐号</th>
+						<th>投诉时间</th>
+						<th>投诉回复时间</th>
+						<th>投诉状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="complaint in complaints">
+						<td></td>
+						<td></td>
+						<td>{{complaint.title}}</td>
+						<td>{{complaint.content}}</td>
+						<th>{{complaint.account}}</th>
+						<td>{{complaint.posttime}}</td>
+						<td>{{complaint.replytime}}</td>
+						<td v-if='complaint.state=="待回复"'><button
+								class="layui-btn layui-btn-danger layui-btn-xs">未回复</button></td>
+						<td v-else='complaint.state=="已回复"'><button
+								class="layui-btn layui-btn-danger layui-btn-xs">回复</button></td>
+						<td class="td-manage">
+							<button class="layui-btn layui-btn layui-btn-xs"
+								onclick="xadmin.open('回复','back-complaint-reply.html')">
+								<i class="layui-icon">&#xe642;</i>回复
+							</button>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+<script>
+	var app = new Vue({
+		el:"#app",
+		data:{
+			complaints:null
+		},
+		mounted:{
+			axios
+			.get('../complaint/showAllComplaints')
+			.then(response => (this.complaints=response.data))
+			.catch(function(error){
+				console.log(error);
+			});
+		}
+		
+	});
+	
+	function searchByState(state){
+		alert(state);
+	}
+	function searchByKeywords(){
+		var keywords=$("#keywords").val();
+		alert(keywords);
+		$.ajax({
+			url:"../complaint/showAllComplaintsByKeywords",
+			type:"post",
+			datatype:"json",
+			data:{
+				keywords:keywords
+			},
+			success:function(data){
+				console.dir(data);
+			}
+		});
+	}
+
+</script>
+</html>

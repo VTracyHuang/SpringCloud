@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>zMatcha - Free Html5 Templates</title>
+	<meta name="description" content="Free Responsive Html5 Css3 Templates">
+	<meta name="author" content="">
+	
+    <!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS
+  ================================================== -->
+	<!-- Definity CSS -->
+  	<link href="../css/zerogrid.css" rel="stylesheet" media="all" type="text/css">
+	<link href="../css/style.css" rel="stylesheet" media="all" type="text/css">
+	<link href="../css/menu.css" rel="stylesheet" media="all" type="text/css">
+	<!-- Lightbox -->
+	<!-- Video Background -->
+	<!-- Animate.css -->
+	<link href="../css/animate.css" rel="stylesheet" media="all" type="text/css">
+	<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+	<!-- Custom Fonts -->
+	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	<!-- Owl Carousel Assets -->
+    <link href="../owl-carousel/owl.carousel.css" rel="stylesheet">
+    <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
+	<link href="../css/personal.css" rel="stylesheet" type="text/css">
+	<link href="../css/infstyle.css" rel="stylesheet" type="text/css">
+	<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+	<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>	
+	<!-- JS -->
+	<script type="text/javascript" src="../js/xadmin.js"></script>
+	<script src="../lib/layui/layui.js" charset="utf-8"></script>
+	 <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/xadmin.css">
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/xadmin.js"></script>
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+   <style type="text/css">
+   		body{
+   			backgroud-color:gray;
+   		}
+		#allmap {width:400px;
+			height:280px;overflow: hidden;margin-top:40px;font-family:"微软雅黑";}
+			
+		.wordarea{
+			width:100%;
+		}
+		.wordtop{
+			width:100%;
+			height:200px;
+			padding-top:20px;
+			border-top: 1px solid lightgray;
+			margin-bottom:20px;
+		}
+		.wordtitle{
+			
+			width:95%;
+			font-size:300%;
+			font-weight:300;
+			text-align:center;
+			margin:30px;
+	
+		}
+		.wordmessage{
+			text-align:left;
+			margin-left:30px;
+			font-size:320%;
+			font-weight:300;
+		}
+		.wordcontainer{
+			width:100%;
+			height:215px;
+			border-top:1px solid gray;
+		}
+		
+		.wordimg{
+			width:10%;
+			margin:20px 20px 20px;
+			text-align:right;
+			float:left;
+		}
+		.wordcontent{
+			width:80%;
+			height:160px;
+			margin-top:20px;
+			float:left;
+			text-align:left;
+		}
+		.word-reply-container{
+			width:100%;
+			height:160px;
+			padding-right:70px;
+			border-top:1px solid lightgray;
+		}
+		.word-reply-img{
+			width:10%;
+			height:100px;
+			margin:20px 20px 0 100px;
+			text-align:right;
+			float:left;
+		}
+		.word-reply-content{
+			width:76%;
+			height:120px;
+			margin-top:20px;
+			float:left;
+			text-align:left;
+		}
+		.reply-account{
+			font-size:large;
+			margin-bottom:20px;
+		}
+		.account{
+			font-size:x-large;
+			margin-bottom:20px;
+		}
+		
+		.content{
+			width：100%;
+			height:80px;
+		}
+		.datetime{
+			width:80%;
+			margin-top:32px;
+			font-size:small;
+			float:left;	
+		}
+		.reply{
+			width:20%;
+			margin-top:32px;
+			font-size:small;
+			float:left;
+			line-height:15px;	
+		}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=msqGXgG1fKQdyuWEQkK0fxD99xSdUW11"></script>
+	<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+</head>
+<body id="page-top" class="sub-page">
+<div class="wrap-body">
+
+	<!--////////////////////////////////////Header-->
+	<header>
+		<div class="wrap-header" >
+			
+			<!---Main Header--->
+			<div class="main-header">
+				<div class="bg-overlay">
+					<!---Hero Content--->
+					<div class="hero-content-wrapper">
+					  <div class="hero-content">
+						<h4 class="h-alt hero-subheading wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">Message Board</h4>
+						<h1 class="hero-lead wow fadeInLeft" data-wow-duration="1.5s" style="font-size: 400%;">留言板</h1>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<!---Top Menu--->
+			<div id="cssmenu" >
+				<ul>
+				   <li class="active"><a href="/complaints/yuelife/index"><span>主页</span></a></li>
+				   <li class="has-sub"><a href="easyLife.html"><span>便民服务</span></a>
+					  <ul>
+						 <li ><a href="easyLife.html"><span>家政服务</span></a>
+						 </li>
+						 <li><a href="easyLife.html"><span>跑腿快递</span></a>
+						 </li>
+					  </ul>
+				   </li>
+				 <li class="has-sub"><a href="#"><span>社区广场</span></a>
+					  <ul>
+						 <li class="has-sub"><a href="/interaction/interaction/tocommunityinteractiontype"><span>社区动态</span></a>
+							 <ul>
+							 	<li ><a href="/interaction/interaction/topublishinteraction"><span>发布动态</span></a>
+							 	</li>
+							 	<li ><a href="/interaction/interaction/tomyinteraction"><span>我的动态</span></a>
+							 	</li>
+						 	</ul>
+						 </li>
+						 <li class="has-sub"><a href="/activity/activity/toActivityPage"><span>社区活动</span></a>
+						 	<ul>
+						 		<li><a href="/activity/activity/toActivityPage"><span>报名进行中</span></a></li>
+						 		<li><a href="/activity/activity/toWait"><span>报名未开始</span></a></li>
+						 		<li><a href="/activity/activity/toOverdue"><span>活动已过期</span></a></li>
+						 	</ul>
+						 </li>
+					  </ul>
+				   </li>
+				   <li><a href="/complaints/yuelife/personal"><span>个人中心</span></a></li>
+				   <li><a href="/complaints/yuelife/aboutus"><span>关于我们</span></a></li>
+				   <li><a href="/complaints/yuelife/words"><span>留言板</span></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</header>
+
+
+
+	<!--////////////////////////////////////Container-->
+	<section id="page-content">
+		<div class="wrap-container zerogrid">
+			<div id="contact-area">
+				<div class="word-area">
+					<div class="wordtop">
+						<div class="wordtitle">
+							悦生活，方便你的生活！
+						</div>
+						<div class="wordmessage" id-="count">
+							3<font style="font-size:80%;font-weight:300;line-height:50px;">条留言</font>
+						</div>
+					</div>
+					<div id="app">
+						<div v-for="word in words">
+							<div class="wordcontainer" v-if="word.w_pid=='0'">
+								<div class="wordimg">
+									<img style="width:55px;height:55px"src="../images/1.jpg"/>
+								</div>
+								<div class="wordcontent">
+									<div class="account">{{word.w_name}}</div>
+									<div class="content">{{word.w_content}}</div>
+									<div class="datetime">{{word.w_posttime}}</div>
+									<div class="reply"><button style="border:none" class="layui-btn layui-btn-sm layui-btn-primary" @click="focusText(word.w_id)">回复</button></div>
+								</div>
+							</div>
+							<div class="word-reply-container" v-else>
+								<div class="word-reply-img">
+									<img style="width:45px;height:45px"src="../images/1.jpg"/>
+								</div>
+								<div class="word-reply-content">
+									<div class="reply-account">{{word.w_name}}</div>
+									<div class="reply-content">{{word.w_content}}</div>
+									<div class="datetime">{{word.w_posttime}}</div>
+									<div class="reply"><button style="border:none" class="layui-btn layui-btn-sm layui-btn-primary" @click="focusText(word.w_id)">回复</button></div>
+								</div>
+							</div>
+					</div>
+					<div style="margin-top:50px;width:85%" >
+						<textarea rows="5" cols="59" id="textReply"></textarea>
+						<input style="margin-left:880px" type="button"  class="button button-skin" value="回复" onclick="replyWords()"/>
+						<input id="wordsId" type="hidden"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="position:absolute; z-index:100;right:0;bottom:0;">
+			<iframe
+		      allow="microphone"
+		       width="350"
+		      height="430"
+		      src="https://tbp.cloud.tencent.com/tbp-h5-v2/?AgentId=TNAQwl1%2BTo8BP%2BDMqwn6DQPcN1301Dcs%2F4%2B3Qw426GFXx3oUxVcuvK8pTbf9ymWGqp3gJ3%2BOq%2B%2FKwng3tSM4mDElvJa48LcSKkn%2FyXrwmPo%3D&ufc=&ubc=&bfc=&bbc=&tfc=&tbc=">
+		    </iframe>
+		</div>
+	</section>
+		<!--////////////////////////////////////Footer-->
+	<footer id="page-footer">
+		<div class="zerogrid wrap-footer">
+			<div class="row">
+				<div class="sm-1-4 col-footer-1">
+					<div class="wrap-col">
+						<h3 class="widget-title">关于我们</h3>
+						我们是六人小组
+					</div>
+				</div>
+				<div class="sm-1-4 col-footer-2">
+					<div class="wrap-col">
+						<h3 class="widget-title">最近动态</h3>
+						<ul>
+							<li><a href="#">雨洁公司推出家政服务套餐啦~</a></li>
+							<li><a href="#">社区最近有组建登牛背山活动哦，快去看看吧~</a></li>
+							<li><a href="#">个人中心支持在线房屋认证系统了，快去了解下吧</a></li>
+							<li><a href="#">累了？困了？饿了吗？ 打把游戏，神清气爽~</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sm-1-4 col-footer-3">
+					<div class="wrap-col">
+						<h3 class="widget-title">标签云</h3>
+						<a href="#">雨洁</a>
+						<a href="#">家政服务</a>
+						<a href="#">跑腿快递</a>
+						<a href="#">活动</a>
+						<a href="#">牛背山</a>
+						<a href="#">摄影</a>
+						<a href="#">登山</a>
+						<a href="#">发动态</a>
+						<a href="#">个人</a>
+						<a href="#">个人中心</a>
+						<a href="#">房屋认证</a>
+						<a href="#">修改</a>
+						<a href="#">电影节</a>
+						<a href="#">动态</a>
+						<a href="#">旅行</a>
+						<a href="#">折扣</a>
+						<a href="#">love</a>
+						<a href="#">化妆</a>
+						<a href="#">步履不停</a>
+						<a href="#">梦</a>
+						<a href="#">关于我们</a>
+						<a href="#">生命不息</a>
+						<a href="#">实名</a>
+					</div>
+				</div>
+				<div class="sm-1-4 col-footer-4">
+					<div class="wrap-col">
+						<h3 class="widget-title">Gallery</h3>
+						<div class="row">
+							<div class="sm-1-3 xs-1-2">
+								<div class="wrap-col">
+									<a href="#"><img src="../images/1.jpg"></a>
+								</div>
+							</div>
+							<div class="sm-1-3 xs-1-2">
+								<div class="wrap-col">
+									<a href="#"><img src="../images/2.jpg"></a>
+								</div>
+							</div>
+							<div class="sm-1-3 xs-1-2">
+								<div class="wrap-col">
+									<a href="#"><img src="../images/3.jpg"></a>
+								</div>
+							</div>
+							<div class="sm-1-3 xs-1-2">
+								<div class="wrap-col">
+									<a href="#"><img src="../images/4.jpg"></a>
+								</div>
+							</div>
+							<div class="sm-1-3 xs-1-2">
+								<div class="wrap-col">
+									<a href="#"><img src="../images/5.jpg"></a>
+								</div>
+							</div>
+							<div class="sm-1-3 xs-1-2">
+								<div class="wrap-col">
+									<a href="#"><img src="../images/6.jpg"></a>
+								</div>
+							</div>
+							<div class="sm-1-3 xs-1-2">
+								<div class="wrap-col">
+									<a href="#"><img src="../images/7.jpg"></a>
+								</div>
+							</div>
+							<div class="sm-1-3 xs-1-2">
+								<div class="wrap-col">
+									<a href="#"><img src="../images/8.jpg"></a>
+								</div>
+							</div>
+							<div class="sm-1-3 xs-1-2">
+								<div class="wrap-col">
+									<a href="#"><img src="../images/1.jpg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="zerogrid bottom-footer">
+			<div class="row">
+				<div class="bottom-social">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-pinterest"></i></a>
+					<a href="#"><i class="fa fa-vimeo"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+			<div class="copyright">
+				Copyright @ - Tracy <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">Collection</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">Collections</a>
+			</div>
+		</div>
+	</footer>
+	<div id="page-top"><a href="#page-top" class="button button-toTop f-right"><i class="fa fa-angle-double-up"></i></a></div>
+	<!-- ========== Scripts ========== -->
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/menu.js"></script>
+	<script src="../js/jquery.localScroll.min.js"></script>
+	<script src="../js/jquery.scrollTo.min.js"></script>
+	<script src="../js/SmoothScroll.js"></script>
+	<script src="../js/wow.min.js"></script>
+		<!-- Definity JS -->
+	<script src="../js/main.js"></script>
+	
+	<script type="text/javascript">
+	
+		var app = new Vue({
+			el:"#app",
+			data:{
+				words:null
+			},
+			mounted(){
+				axios
+				.get('../user/showAllWords')
+				.then(response => (this.words=response.data))
+				.catch(function(error){
+					console.log(error);
+				});
+			},
+			methods:{
+				focusText:function(w_id){
+					$("#textReply").focus();
+					alert(w_id);
+					$("#wordsId").val(w_id);
+					var w_pid = $("#wordsId").val();
+				},
+			}
+		
+		});
+		function replyWords(){
+			var w_pid = $("#wordsId").val();
+			var w_content=$("#textReply").val();
+			alert(w_pid);
+			if(w_content!=null&&w_content!=""){
+				$.ajax({
+					url:'../user/replyWords',
+					data:{
+						w_pid : w_pid,
+						w_content : w_content
+					},
+					type:"POST",
+					dataType:"json",
+					success:function(flag){
+						if(flag){
+							var url = "ws://localhost:8889/chat/"+"Tracy";
+							var ws = null;
+							var message = "回复了你的留言";
+							ws = new WebSocket(url);
+							//给ws绑定事件
+							ws.onopen = function(){
+								console.info("连接服务器成功!");
+								//发送消息
+								if(ws!=null){
+									ws.send(message);
+								}
+							}
+							
+							//onmessage:接收到服务器数据时触发
+							ws.onmessage = function(result){
+								console.dir(result.data);  //显示得到的数据
+							}
+							ws.onerror = function () {
+						        console.log("onerror...");
+						    };
+							window.location.reload();
+						}
+					}
+				});
+			}
+		}
+	</script>
+
+
+</div>
+</body></html>

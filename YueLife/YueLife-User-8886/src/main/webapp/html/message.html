@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="../css/personal.css" rel="stylesheet" type="text/css">
+		<link href="../css/infstyle.css" rel="stylesheet" type="text/css">
+		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>	
+	<!-- Mobile Specific Metas
+		================================================== -->
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		  
+		  <!-- CSS
+		================================================== -->
+			<!-- Definity CSS -->
+			<link href="../css/zerogrid.css" rel="stylesheet" media="all" type="text/css">
+			<link href="../css/style.css" rel="stylesheet" media="all" type="text/css">
+			<link href="../css/menu.css" rel="stylesheet" media="all" type="text/css">
+			<!-- Lightbox -->
+			<!-- Video Background -->
+			<!-- Animate.css -->
+			<link href="../css/animate.css" rel="stylesheet" media="all" type="text/css">
+			
+			<!-- Custom Fonts -->
+			<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+			
+			<!-- Owl Carousel Assets -->
+		  <link href="../owl-carousel/owl.carousel.css" rel="stylesheet">
+		  <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
+			<link href="../css/personal.css" rel="stylesheet" type="text/css">
+			<link href="../css/infstyle.css" rel="stylesheet" type="text/css">
+			<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+			<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>	
+			<!-- JS -->
+			<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="wrap-header" >
+				<img  style="width: 100% " src="../images/personalCenter.png" />
+				<!---Top Menu--->
+				<div id="cssmenu" >
+					<ul>
+					   <li class="active"><a href="/complaints/yuelife/index"><span>主页</span></a></li>
+					   <li class="has-sub"><a href="easyLife.html"><span>便民服务</span></a>
+						  <ul>
+							 <li ><a href="easyLife.html"><span>家政服务</span></a>
+							 </li>
+							 <li><a href="easyLife.html"><span>跑腿快递</span></a>
+							 </li>
+						  </ul>
+					   </li>
+					 <li class="has-sub"><a href="#"><span>社区广场</span></a>
+						  <ul>
+							 <li class="has-sub"><a href="/interaction/interaction/tocommunityinteractiontype"><span>社区动态</span></a>
+								 <ul>
+								 	<li ><a href="/interaction/interaction/topublishinteraction"><span>发布动态</span></a>
+								 	</li>
+								 	<li ><a href="/interaction/interaction/tomyinteraction"><span>我的动态</span></a>
+								 	</li>
+							 	</ul>
+							 </li>
+							 <li class="has-sub"><a href="/activity/activity/toActivityPage"><span>社区活动</span></a>
+							 	<ul>
+							 		<li><a href="/activity/activity/toActivityPage"><span>报名进行中</span></a></li>
+							 		<li><a href="/activity/activity/toWait"><span>报名未开始</span></a></li>
+							 		<li><a href="/activity/activity/toOverdue"><span>活动已过期</span></a></li>
+							 	</ul>
+							 </li>
+						  </ul>
+					   </li>
+					   <li><a href="/complaints/yuelife/personal"><span>个人中心</span></a></li>
+					   <li><a href="/complaints/yuelife/aboutus"><span>关于我们</span></a></li>
+					   <li><a href="/complaints/yuelife/words"><span>留言板</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="user-news">
+					
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">我的消息</strong> / <small>News</small></div>
+						</div>
+					
+						<div class="am-tabs am-tabs-d2" data-am-tabs>
+							<ul class="am-avg-sm-3 am-tabs-nav am-nav am-nav-tabs">
+								<li class="am-active"><a href="#tab1">我的留言</a></li>
+								<li><a href="#tab2">我的回复</a></li>
+							</ul>
+					
+							<div class="am-tabs-bd">
+								<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+											<div id="app">
+												<table style="width:500px;height:600px">
+													<thead>
+														<tr>
+															<th></th>
+															<th>留言内容</th>
+															<th>留言时间</th>
+															<th>操作</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr v-for="(word,index) in words">
+															<td>{{word.w_name}}</td>
+															<td>{{word.w_content}}</td>
+															<td>{{word.w_posttime}}</td>
+															<td><a href="../yuelife/words">查看</a></td>
+														</tr>
+										
+													</tbody>
+												</table>
+							
+									</div>
+								</div>
+					
+								<div class="am-tab-panel am-fade" id="tab3">
+									<!--消息 -->
+										<div class="s-msg-item s-msg-temp i-msg-downup">
+											<h6 class="s-msg-bar"><span class="s-name">订单已签收</span></h6>
+											<div class="s-msg-content i-msg-downup-wrap">
+												<div class="i-msg-downup-con">
+													<a class="i-markRead" target="_blank" href="logistics.html">
+													<div class="m-item">	
+														<div class="item-pic">															
+																	<img src="../images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
+														</div>
+														<div class="item-info">
+															您购买的美康粉黛醉美唇膏已签收，
+															快递单号:373269427868
+														</div>
+																											
+					                                </div>	
+					
+													<p class="s-row s-main-content">
+															查看详情 <i class="am-icon-angle-right"></i>
+													</p>
+													</a>
+												</div>
+											</div>
+											<a class="i-btn-forkout" href="#"><i class="am-icon-close am-icon-fw"></i></a>
+										</div>
+								</div>
+					
+								<div class="am-tab-panel am-fade" id="tab2">
+									<span id="testtx"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+		
+				</div>
+			</div>
+		
+			<aside class="menu">
+				<ul>
+					<div style="border-bottom: 2px solid green;padding: 2px;">
+						<a href="index.html"><img class="user-icon" src="../images/user.png"/><font style="font-size: medium;">个人中心</font></a>
+					</div>
+						
+					
+					<li class="person">
+						<p><img class="user-icon2" src="../images/usermessage.png"/></i>个人资料</p>
+						<ul>
+							<li> <a href="personal.html">个人信息</a></li>
+							<li> <a href="password.html">密码修改</a></li> </li>
+						</ul>
+					</li>
+<!-- 					<li class="person">
+						<p><img class="user-icon2" src="../images/collection.png"/>我的收藏</p>
+						<ul>
+							<li> <a href="collection.html">店铺收藏</a></li>
+						</ul>
+					</li>
+			 -->
+					<li class="person">
+						<p><img class="user-icon2" src="../images/serviceplat.png"/>服务中心</p>
+						<ul>
+							<li> <a href="complaint.html">投诉中心</a></li>
+							<li> <a href="message.html">消息中心</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+		</div>
+	</body>
+	<script type="text/javascript">
+		 //显示我的留言
+   		var app = new Vue({
+				el:'#app',
+				data:{
+					words : null
+				},
+				mounted(){
+					var username = "Emma";
+					axios
+					.get('../user/showWordsByUser',{params:{username:username}},{emulateJSON: true})
+					.then(response => (this.words=response.data))
+					.catch(function(error){
+						console.log(error);
+					});
+				}
+			}); 
+		var username="mia";
+		var url = "ws://192.168.7.174:8889/chat/"+username;
+		var ws = null;
+		ws = new WebSocket(url);
+		//给ws绑定事件
+		ws.onopen = function(){
+			console.info("连接服务器成功!");
+		}
+		//onmessage:接收到服务器数据时触发
+		ws.onmessage = function(result){
+			
+			console.info(result.data);  //显示得到的数据
+			alert(result.data);
+			//将消息添加到消息列表上
+			content=result.data+"<a href="+"\"../yuelife/words\""+">查看</a>"
+			$("#testtx").html(content);  //换行显示
+			
+		}
+	    function scrollx(p){
+		     var d = document,dd = d.documentElement,db = d.body,w = window,o = d.getElementById(p.id),ie6 = /msie 6/i.test(navigator.userAgent),style,timer;
+		     if(o){
+		      o.style.cssText +=";position:"+(p.f&&!ie6?'fixed':'absolute')+";"+(p.l==undefined?'left:0;':'left:'+p.l+'px;')+(p.t!=undefined?'top:'+p.t+'px':'bottom:0');
+		      if(p.f&&ie6){
+		    o.style.cssText +=';left:expression(documentElement.scrollLeft + '+(p.l==undefined?dd.clientWidth-o.offsetWidth:p.l)+' + "px");top:expression(documentElement.scrollTop +'+(p.t==undefined?dd.clientHeight-o.offsetHeight:p.t)+'+ "px" );';
+		    dd.style.cssText +=';background-image: url(about:blank);background-attachment:fixed;';
+		   }else{
+		    if(!p.f){
+		      w.onresize = w.onscroll = function(){
+		       clearInterval(timer);
+		       timer = setInterval(function(){
+		        //双选择为了修复chrome 下xhtml解析时dd.scrollTop为 0
+		        var st = (dd.scrollTop||db.scrollTop),c;
+		        c = st  - o.offsetTop + (p.t!=undefined?p.t:(w.innerHeight||dd.clientHeight)-o.offsetHeight);
+		        if(c!=0){
+		         o.style.top = o.offsetTop + Math.ceil(Math.abs(c)/10)*(c<0?-1:1) + 'px';
+		        }else{
+		         clearInterval(timer);  
+		        }
+		       },10)
+		      
+		     }
+		     
+		    }
+		   }
+		     }  
+		   }
+		    scrollx({
+		     id:'aa',
+		    t:300,
+		    })
+		 
+		    /*
+		     id 你要滚动的内容的id
+		     l 横坐标的位置  不写为紧贴右边
+		     t 你要放在页面的那个位置默认是贴着底边 0是贴着顶边
+		     f 1表示固定 不写或者0表示滚动
+		    */
+		    
+		    
+		   
+		    
+	</script>
+</html>

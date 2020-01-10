@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>倒计时5秒跳转页面</title>
+    </head>
+    <body>
+        恭喜您！登陆成功，<span id="zhuan" style="color: red; font-size: 20px;">5</span>秒后跳转页面!<br />
+        如果不成功，<a href="http://www.baidu.com" target="_self">点击这里</a>
+    </body>
+    <script type="text/javascript">
+        var time=4;
+        var timer = setInterval(function(){
+            var str = document.getElementById("zhuan");
+            if(time>=1){
+                str.innerHTML=time;
+                time--;
+            }else{
+                clearInterval(timer);
+                location.href = "https://www.baidu.com";
+            }
+        },1000)
+    </script>
+</html>

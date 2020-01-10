@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>zMatcha - Free Html5 Templates</title>
+	<meta name="description" content="Free Responsive Html5 Css3 Templates">
+	<meta name="author" content="">
+	
+    <!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- CSS
+  ================================================== -->
+	<!-- Definity CSS -->
+  	<link href="../css/zerogrid.css" rel="stylesheet" media="all" type="text/css">
+	<link href="../css/style.css" rel="stylesheet" media="all" type="text/css">
+	<link href="../css/menu.css" rel="stylesheet" media="all" type="text/css">
+	<!-- Lightbox -->
+	<link href="../css/lightbox.css" rel="stylesheet" media="all" type="text/css">
+	<!-- Video Background -->
+	<link href="../css/jquery.mb.ytplayer.min.css" rel="stylesheet" media="all" type="text/css">
+	<!-- Animate.css -->
+	<link href="../css/animate.css" rel="stylesheet" media="all" type="text/css">
+	
+	<!-- Custom Fonts -->
+	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+	<!-- Owl Carousel Assets -->
+    <link href="../owl-carousel/owl.carousel.css" rel="stylesheet">
+    <!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
+	
+	<!-- JS -->
+	
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+		<script src="js/css3-mediaqueries.js"></script>
+	<![endif]-->
+    
+</head>
+<body id="page-top">
+<div class="wrap-body">
+
+	<!--////////////////////////////////////Header-->
+	<header>
+		<div class="wrap-header" >
+			
+			<!---Main Header--->
+			<div class="main-header">
+				<div class="bg-overlay">
+					
+					<!---Hero Content--->
+					<div class="hero-content-wrapper">
+					  <div class="hero-content">
+						<h3 class="h-alt hero-subheading wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s" style="color:white">  恭喜您！修改密码成功，<span id="zhuan" style="color: red; font-size: 20px;">5</span>秒后跳转页面!<br /></h3>
+						<h3 class="h-alt hero-subheading wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s" style="color:white">   如果不成功，<a href="../yuelife/personal" target="_self" style="text-decoration:underline" >点击这里</a> </h3>
+					  </div>
+					</div>
+					<!---Scroller--->
+					<div id="scroll-page-content">
+						<a href="#page-content" class="scroller">
+							<span class="scroller-text">scroll down</span>
+							<div class="scroller-button">
+								<i class="fa fa-angle-double-down"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<body>
+		
+	</body>
+	 <script type="text/javascript">
+        var time=4;
+        var timer = setInterval(function(){
+            var str = document.getElementById("zhuan");
+            if(time>=1){
+                str.innerHTML=time;
+                time--;
+            }else{
+                clearInterval(timer);
+                location.href = "../html/index.html";
+            }
+        },1000)
+    </script>
+</html>
+
+

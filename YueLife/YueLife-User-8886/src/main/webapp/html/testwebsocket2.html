@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+<body>
+	<input type="text" id="testtx"/>
+</body>
+
+<script type="text/javascript">
+	$(function(){
+		var username="mia";
+		var url = "ws://192.168.7.164:8889/chat/"+username;
+		var ws = null;
+		ws = new WebSocket(url);
+		//给ws绑定事件
+		ws.onopen = function(){
+			console.info("连接服务器成功!");
+		}
+		//onmessage:接收到服务器数据时触发
+		ws.onmessage = function(result){
+			alert("1");
+			console.info(result);  //显示得到的数据
+			//将消息添加到消息列表上
+			$("#testtx").val(result.data);  //换行显示
+			
+		}
+	});
+	
+</script>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="../css/personal.css" rel="stylesheet" type="text/css">
+		<link href="../css/infstyle.css" rel="stylesheet" type="text/css">
+		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+			<!-- Mobile Specific Metas================================================== -->
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+			<!-- CSS================================================== -->
+			<!-- Definity CSS -->
+			<link href="../css/zerogrid.css" rel="stylesheet" media="all" type="text/css">
+			<link href="../css/style.css" rel="stylesheet" media="all" type="text/css">
+			<link href="../css/menu.css" rel="stylesheet" media="all" type="text/css">
+
+			<!-- Animate.css -->
+			<link href="../css/animate.css" rel="stylesheet" media="all" type="text/css">
+			
+			<!-- Custom Fonts -->
+			<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+			
+			<!-- Owl Carousel Assets -->
+		  	<link href="../owl-carousel/owl.carousel.css" rel="stylesheet">
+		 	<!-- <link href="owl-carousel/owl.theme.css" rel="stylesheet"> -->
+			<link href="../css/personal.css" rel="stylesheet" type="text/css">
+			<link href="../css/infstyle.css" rel="stylesheet" type="text/css">
+			
+			<!-- JS -->
+			<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+			<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>	
+			<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+			<script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="wrap-header" >
+				<img  style="width: 100% "  src="../images/personalCenter.png" />
+				<!---Top Menu--->
+			<div id="cssmenu" >
+				<ul>
+				   <li class="active"><a href="/complaints/yuelife/index"><span>主页</span></a></li>
+				   <li class="has-sub"><a href="easyLife.html"><span>便民服务</span></a>
+					  <ul>
+						 <li ><a href="easyLife.html"><span>家政服务</span></a>
+						 </li>
+						 <li><a href="easyLife.html"><span>跑腿快递</span></a>
+						 </li>
+					  </ul>
+				   </li>
+				 <li class="has-sub"><a href="#"><span>社区广场</span></a>
+					  <ul>
+						 <li class="has-sub"><a href="/interaction/interaction/tocommunityinteractiontype"><span>社区动态</span></a>
+							 <ul>
+							 	<li ><a href="/interaction/interaction/topublishinteraction"><span>发布动态</span></a>
+							 	</li>
+							 	<li ><a href="/interaction/interaction/tomyinteraction"><span>我的动态</span></a>
+							 	</li>
+						 	</ul>
+						 </li>
+						 <li class="has-sub"><a href="/activity/activity/toActivityPage"><span>社区活动</span></a>
+						 	<ul>
+						 		<li><a href="/activity/activity/toActivityPage"><span>报名进行中</span></a></li>
+						 		<li><a href="/activity/activity/toWait"><span>报名未开始</span></a></li>
+						 		<li><a href="/activity/activity/toOverdue"><span>活动已过期</span></a></li>
+						 	</ul>
+						 </li>
+					  </ul>
+				   </li>
+				   <li><a href="/complaints/yuelife/personal"><span>个人中心</span></a></li>
+				   <li><a href="/complaints/yuelife/aboutus"><span>关于我们</span></a></li>
+				   <li><a href="/complaints/yuelife/words"><span>留言板</span></a></li>
+				</ul>
+			</div>
+			</div>
+		</header>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="user-news">
+
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">我的投诉</strong> / <small>Complaints</small></div>
+						</div>
+
+						<div class="am-tabs am-tabs-d2" data-am-tabs>
+							<ul class="am-avg-sm-3 am-tabs-nav am-nav am-nav-tabs">
+								<li class="am-active"><a href="#tab1" id="myComplaint">我的投诉</a></li>
+								<li><a href="#tab2">发表投诉</a></li>
+								<!--<li><a href="#tab3">投诉回复</a></li>  -->
+							</ul>
+
+							<div class="am-tabs-bd">
+								<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+									<div id="app">
+										<table class="am-table am-table-striped am-table-hover">
+ 											<tr>
+ 												<th>投诉编号</th>
+ 												<th>投诉标题</th>
+ 												<th>投诉内容</th>
+ 												<th>投诉时间</th>
+ 												<th>回复状态</th>
+ 												<th>回复内容</th>
+ 											</tr>
+ 											<tr v-for="(complaint,index) in complaints">
+ 												<td>{{index+1}}</td>
+ 												<td>{{complaint.title}}</td>
+ 												<td>{{complaint.content}}</td>
+ 												<td>{{complaint.posttime}}</td>
+ 												<td>{{complaint.state}}</td>
+ 												<td>{{complaint.replycontent}}</td>
+ 											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="am-tab-panel am-fade" id="tab2">
+									<div class="suggestmain">
+										<div class="suggestDetail">
+											<p>标题：</p>
+											<blockquote class="textArea" >
+												<input type="text" id="title"/>
+												<div class="fontTip"><i class="cur">0</i> / <i>10</i></div>
+											</blockquote>
+										</div>
+										<br/>
+										<div class="suggestDetail">
+											<p>描述问题：</p>
+											<blockquote class="textArea">
+												<textarea name="opinionContent" id="content" cols="60" rows="5" autocomplete="off" placeholder="在此描述您的意见具体内容"></textarea>
+												<div class="fontTip"><i class="cur">0</i> / <i>200</i></div>
+											</blockquote>
+										</div>
+										<div class="am-btn am-square am-btn-success anniu" id="addComplaint">提交</div>
+										<p class="suggestTel"><i class="am-icon-phone"></i>客服电话：400-007-1234</p>
+									</div>
+								</div>
+								
+								<!-- <div class="am-tab-panel am-fade" id="tab2">
+									消息
+									<div class="s-msg-item s-msg-temp i-msg-downup">
+										<h6 class="s-msg-bar"><span class="s-name">订单已签收</span></h6>
+										<div class="s-msg-content i-msg-downup-wrap">
+											<div class="i-msg-downup-con">
+												<a class="i-markRead" target="_blank" href="logistics.html">
+													<div class="m-item">
+														<div class="item-pic">
+															<img src="../images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
+														</div>
+														<div class="item-info">
+															您购买的美康粉黛醉美唇膏已签收，
+															快递单号:373269427868
+														</div>
+								
+													</div>
+								
+													<p class="s-row s-main-content">
+														查看详情 <i class="am-icon-angle-right"></i>
+													</p>
+												</a>
+											</div>
+										</div>
+										<a class="i-btn-forkout" href="#"><i class="am-icon-close am-icon-fw"></i></a>
+									</div>
+								</div> -->
+								
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<aside class="menu">
+				<ul>
+					<div style="border-bottom: 2px solid green;padding: 2px;">
+						<a href="index.html"><img class="user-icon" src="../images/user.png"/><font style="font-size: medium;">个人中心</font></a>
+					</div>
+						
+					
+					<li class="person">
+						<p><img class="user-icon2" src="../images/usermessage.png"/></i>个人资料</p>
+						<ul>
+							<li> <a href="personal.html">个人信息</a></li>
+							<li> <a href="password.html">密码修改</a></li> </li>
+						</ul>
+					</li>
+				<!-- 	<li class="person">
+						<p><img class="user-icon2" src="../images/collection.png"/>我的收藏</p>
+						<ul>
+							<li> <a href="collection.html">店铺收藏</a></li>
+						</ul>
+					</li> -->
+			
+					<li class="person">
+						<p><img class="user-icon2" src="../images/serviceplat.png"/>服务中心</p>
+						<ul>
+							<li> <a href="complaint.html">投诉中心</a></li>
+							<li> <a href="message.html">消息中心</a></li>
+						</ul>
+					</li>
+				</ul>
+			</aside>
+		</div>
+	</body>
+	<script type="text/javascript">
+	
+		$(function(){
+			getdata();
+		});
+		function getdata(){
+			var app = new Vue({
+				el:'#app',
+				data:{
+					complaints :null
+				},
+				mounted(){
+					axios
+						.get('../complaint/showComplaints')
+						.then(response => (this.complaints=response.data))
+						.catch(function(error){
+							console.log(error);
+						});
+				}
+			});
+		};
+	 	$("#myComplaint").click(function(){
+			getdata();
+		});
+		$("#addComplaint").click(function(){
+			var title = $("#title").val();
+			var content = $("#content").val();
+			$.ajax({
+				url:"../complaint/addComplaint",
+				type:"post",
+				data:{
+					title:title,
+					content:content
+				},
+				success:function(result){
+					if(result){
+						alert("您的投诉我们已经收到，感谢您的来信！");
+						var title = $("#title").val(" ");
+						var content = $("#content").val(" ");
+					}else{
+						alert("当前网络忙");
+					}
+				}
+			});
+		});
+	
+	</script>
+</html>
